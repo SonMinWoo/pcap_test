@@ -67,6 +67,12 @@ int main(int argc, char* argv[]) {
 	if(i < 14 || i == 23 || i > 51){
 		printf("%02x ", *(packet+i));
 	}
+	if(i == 23){
+		int a;
+		a = (int)*(packet+i);
+		if(a == 6)
+			printf("(TCP)");
+	}
 	if(i == 34){
 		sa = (int)*(packet+i);
 	}
